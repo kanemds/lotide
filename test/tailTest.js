@@ -1,11 +1,25 @@
-const assertEqual = require('../assertEqual');
+// const assertEqual = require('../assertEqual');
+// const assertEqual = require('../assertEqual');
+
+const assert = require('chai').assert;
+
+
 const tail = require('../tail.js');
-const letter = ["a"];
-const empty = [];
-const words = ["Yo Yo", "Lighthouse", "Labs"];
-tail(words);
-// no need to capture the return value since we are not checking it
-assertEqual(words.length, 3); // original array should still have 3 elements!
-console.log(tail(words));
-console.log(tail(letter));
-console.log(tail(empty));
+
+// Note that for comparing arrays, Chai gives us assert.deepEqual.
+
+// because assert.strictEqual simply uses === to compare values, which will not work for comparing objects and arrays.
+
+
+
+describe("#tail", ()=> {
+  it("return []", ()=> {
+    assert.deepEqual(tail(["a"]), []);
+  });
+  it("return []", ()=> {
+    assert.deepEqual(tail([]),[]);
+  });
+  it("return [Lighthouse, Labs]", ()=> {
+    assert.deepEqual(tail(["Yo Yo", "Lighthouse", "Labs"]),["Lighthouse", "Labs"]);
+  });
+});
