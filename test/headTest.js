@@ -20,7 +20,4 @@ describe('#head', ()=> {
   it(`return "Hello" for ["Hello", "Lighthouse", "Labs"]`, ()=> {
     assert.strictEqual(head(["Hello", "Lighthouse", "Labs"]), "Hello");
   });
-  it('return 8 for [5,6,7)', ()=> {
-    assert.strictEqual(head([5,6,7]), 8);
-  });
 });
