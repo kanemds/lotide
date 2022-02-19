@@ -8,6 +8,7 @@ const without = (setOne,setTwo) => {
   let result = [];
   for (let i = 0; i < setOne.length; i++) {
     if (setTwo.indexOf(setOne[i]) < 0) {
+      console.log(setTwo.indexOf(setOne[i]));
       result.push(setOne[i]);
     }
   }
@@ -17,3 +18,6 @@ const without = (setOne,setTwo) => {
 console.log(without([1, 2, 3], [1])); // => [2, 3]
 console.log(without(["1", "2", "3"], [1, 2, "3"])); // => ["1", "2"]
 console.log(without(["1", "2", "3"], [1, 2, "3", "6", 9 , "v", "1","1"]));
+
+
+module.exports = without;
