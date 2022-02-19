@@ -44,3 +44,6 @@ assertArraysEqual(upperCase,[ 'GROUND', 'CONTROL', 'TO', 'MAJOR', 'TOM' ]);
 // scenario 3
 assertArraysEqual(reverse,[ 'ro', 'on', 'o', 'aj', 'oo' ]);
 
+module.exports = map;
+
+
