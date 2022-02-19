@@ -33,3 +33,5 @@ const assertEqual = function(actual, expected) {
 };
 
 assertEqual(key,"noma");
+
+module.exports = findKey;
