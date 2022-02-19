@@ -44,3 +44,5 @@ flatten([1, 2, [3, 4], 5, [6]]); // => [1, 2, 3, 4, 5, 6]
 
 const array = [ 'this', 'is', 'an', 'array' ];
 console.log(typeof array); //object
+
+module.exports = flatten;
