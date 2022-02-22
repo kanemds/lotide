@@ -1,27 +1,4 @@
-const eqArrays = (firstSet,secondSet) => {
-  
-  if (firstSet.length !== secondSet.length) {
-    return false;
-  }
-  for (let i = 0; i < firstSet.length; i++) {
-    if ((firstSet[i] !== secondSet[i])) {
-      return false;
-    }
-  }
-  return true;
-};
-
-
-// console.log(assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true));
-
-const assertArraysEqual = (a,b) => {
-  if (eqArrays(a,b) === false) {
-    console.log("🤣🤣 sadly, not equal!");
-  } else {
-    console.log("😉😉 It's equal!");
-  }
-};
-
+const eqArrays = require('./eqArrays');
 
 const eqObjects = (object1, object2) => {
   const key1 = Object.keys(object1);
@@ -61,9 +38,9 @@ const eqObjects = (object1, object2) => {
 };
 
 
-console.log(eqObjects({ a: { z: 1 }, b: 2, c: 3}, { a: { z: 1 }, b: 2, c:3 })); // => true
-console.log(eqObjects({ a: { y: 0, z: 1 }, b: 2,c:1 }, { a: { z: 1 }, b: 2 })); // => false
-console.log(eqObjects({ a: { y: 0, z: 1 }, b: 2,c:3 }, { a: 1, b: 2 })); // => false
+// console.log(eqObjects({ a: { z: 1 }, b: 2, c: 3}, { a: { z: 1 }, b: 2, c:3 })); // => true
+// console.log(eqObjects({ a: { y: 0, z: 1 }, b: 2,c:1 }, { a: { z: 1 }, b: 2 })); // => false
+// console.log(eqObjects({ a: { y: 0, z: 1 }, b: 2,c:3 }, { a: 1, b: 2 })); // => false
 
 
 
