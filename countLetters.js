@@ -1,19 +1,6 @@
-const assertEqual = function(actual, expected) {
-  if (actual !== expected) {
-    console.log(`🛑😂 Assertion Failed: ${actual} !== ${expected}`);
-  }
-  if (actual === expected) {
-    console.log(`✅😁 Assertion Passed: ${actual} === ${expected}`);
-  }
-};
-
-// TEST CODE
-// assertEqual("Lighthouse Labs", "Bootcamp");
-// assertEqual(1, 1);
-// assertEqual("aaa", "bbb");
-// assertEqual(1, "2");
-// assertEqual("A","A");
-
+// const assertEqual = require('./assertEqual');
+// const eqObjects = require('./eqObjects');
+const assertObjectsEqual = require('./assertObjectsEqual');
 
 const countLetters = (datas) => {
   let result = {};
@@ -30,6 +17,16 @@ const countLetters = (datas) => {
   return result;
 };
 
-console.log(countLetters("lighthouse in the house"));
+assertObjectsEqual(countLetters("lighthouse in the house") , {
+  l: 1,
+  i: 2,
+  g: 1,
+  h: 4,
+  t: 2,
+  o: 2,
+  u: 2,
+  s: 2,
+  e: 3,
+  n: 1 });
 
 module.exports = countLetters;
