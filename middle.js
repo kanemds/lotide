@@ -9,16 +9,16 @@ const middle = data => {
     return [];
   }
   
-  let nums = data.filter(data => Number(data));
-  let item = nums.length;
+  let item = data.length;
   if (item % 2 === 0) {
-    result.push(nums[item / 2 - 1]);
-    result.push(nums[item / 2]);
+    result.push(data[item / 2 - 1]);
+    result.push(data[item / 2]);
   } else {
-    result.push(nums[Math.floor(item / 2)]);
+    result.push(data[Math.floor(item / 2)]);
   }
   return result;
 };
+
 
 module.exports = middle;
 
